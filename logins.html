@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page| User</title>
+    <link rel="stylesheet" href="./styles2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../images/favicon.png" type="">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+             <div class="input-box">
+                <input type="password" placeholder="Password" id="password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Dont have an account? <a href="#">Register</a></p>
+            </div>
+            <script type="text/javascript">
+                const form = document.querySelector('form');
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // prevent default form submission behavior
+        
+                    // validate username and password
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    if (username === 'admin' && password === '472580') {window.location.href="/index2.html"
+                        alert('Welcome Master Jedidiah!'); href="/index2.html"
+                    } else {
+                        alert('Username or password incorrect. Please try again.');
+                    }
+                });
+            </script>
+        </form>
+    </div>
+</body>
+</html>
